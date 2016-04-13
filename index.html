@@ -1,0 +1,63 @@
+<html>
+<head>
+    <title> JavaScript.</title>
+    <meta charset="utf-8" />
+    <link rel="stylesheet" href="style.css" type="text/css"/>
+    <link rel="stylesheet" href="jquery-ui.min.css" type="text/css"/>
+    <script type="text/javascript" src="jquery-2.2.2.min.js"></script>
+    <script type="text/javascript" src="jquery-ui.min.js"></script>
+    <script type="text/javascript" src="script.js"></script>
+</head>
+<body>
+    
+    	<form >
+			<fieldset>
+				<legend><font size="5"><b>Регистрация</b></font></legend>
+				<label>
+					Ваше Имя:<br>
+					<input type="text" id = "username" name = "username" size="30" /><br>
+				</label>
+				<label>
+					Пароль:<br>
+					<input type="password" id="password" name = "password" size="30" /><br>
+				</label>                
+				<label>
+					E-mail:<br>
+					<input type="email" id="email" name = "email" size="60" /><br>
+				</label>
+
+				<label>
+					Ваш пол:<br>
+					<input type="text" id = "gender" name = "gender" size="1" /><br>
+				</label>
+				<label>
+					Кредитная карта:<br>
+					<input type="text" id = "credit_card" name = "credit_card" size="17" /><br>
+				</label>
+
+				<label>
+					Текст:<br>
+					<input type="text" id = "bio" name = "bio" size="30" /><br>
+				</label>
+                <label>
+					День рождения:<br>
+					<input type="date" id = "birth" name = "birth" size="30" /><br>
+				</label>
+                 Заполнено полей: <br>               
+                <div id="progressbar">
+                </div>
+             
+                
+			</fieldset>
+		</form>
+    
+	<input type="submit" id="send" value="Зарегистрироваться" />    
+    
+    
+    
+	<div id="response" title = "Результат проверки">
+	</div>
+
+
+</body>
+</html>
