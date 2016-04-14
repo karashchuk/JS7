@@ -1,6 +1,20 @@
 
 (function($) {
     $(function() {
+        
+        //Выводит progresbar по мере заполнения полей
+        //
+        $(document).on('focusout','input',function(event){
+            var q=0;
+            var l=$("input[type != 'submit']").length;
+            for (var i=0;i<l;i++){
+                if($("input:eq("+i+")").val()) ++q;
+            };
+            $( "#progressbar" ).progressbar({max : 7, value: q,});
+        });
+        
+        //Проверяет данные
+        //
         $(document).on('click', '#send', function(event) {
 
             $('input.active').removeClass('active');
@@ -27,13 +41,13 @@
                 
                 //Вывод progressbar
                 //
-                var j = 0;
+                /*var j = 0;
                 $('input.active').each(function(k){
                     k++;
                     return j=k;
                 });
                     //console.log(''+j);
-                $( "#progressbar" ).progressbar({max : 7, value: 7-j,});
+                $( "#progressbar" ).progressbar({max : 7, value: 7-j,});*/
                 
                 
                 $('#response').html($('#response').html() +'<br>'+myError).dialog( {
